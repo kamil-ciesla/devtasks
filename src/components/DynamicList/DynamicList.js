@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
 export const DynamicList = (props) => {
-  console.log(props.n);
+  const listElements = [...Array(props.n).keys()]
   return (
     <ul>
-      XD
-      {[...Array(props.n).keys()].map((elementNumber) => {
+      {listElements.map((elementNumber) => {
         return (
           <li
             key={elementNumber}
